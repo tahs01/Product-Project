@@ -14,4 +14,4 @@ If you decide to deploy other tools like Istio or MetalLB, you will encounter mo
 
 
 
-#thanhtikesoe
+
