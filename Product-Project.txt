@@ -1,0 +1,13 @@
+"What I understood about Kubernetes fundamental Concept as a beginner, who has just had hands-on experiences:"
+
+A Kubernetes cluster is a collection of nodes running on Kubernetes. To find out how many nodes are currently running and their detailed information (such as master nodes, worker nodes, internal IP, external IP, OS, container runtime, etc.), you can use the following command: "kubectl get nodes -o wide." These nodes can be either virtual machines or physical machines, and from a networking perspective, they represent the first layer of networking.
+
+In real-world scenarios, there may be multiple Kubernetes clusters, each managed by separate teams. Some Kubernetes clusters may run on various cloud providers to ensure server availability even within the same company.
+
+Each microservice has its own IP address, but Pods are managed by ReplicaSets, and ReplicaSets are controlled by Deployments using labels and selectors. It's important to note that the Pod's ID and IP address are ephemeral; they change after termination and recreation. To ensure communication with all Pods, we use Kubernetes services that utilize labels and selectors as endpoints for services.
+
+Now, let's discuss namespaces, which are one of the Kubernetes API resources. A namespace is similar to a VLAN in networking; it acts as a boundary for separating microservice groups, such as different teams or projects. Creating separate namespaces allows easy management of network policies. If you want to delete all pods at once, you can simply delete the namespace that runs all the pods. Otherwise, by default, all resources run in the "default" namespace.
+
+The various resources mentioned earlier, such as Pods, ReplicaSets, Deployments, namespaces, Services, NetworkPolicies, etc., are default Kubernetes API resources. It's essential to study and familiarize yourself with these API resources to work effectively with Kubernetes. Additionally, understanding the core concepts and knowing how to read the official documentation is crucial for successful deployments.
+
+If you decide to deploy other tools like Istio or MetalLB, you will encounter more Kubernetes API resources in the form of Custom Resources Definitions (CRD).
