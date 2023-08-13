@@ -11,3 +11,7 @@ Now, let's discuss namespaces, which are one of the Kubernetes API resources. A 
 The various resources mentioned earlier, such as Pods, ReplicaSets, Deployments, namespaces, Services, NetworkPolicies, etc., are default Kubernetes API resources. It's essential to study and familiarize yourself with these API resources to work effectively with Kubernetes. Additionally, understanding the core concepts and knowing how to read the official documentation is crucial for successful deployments.
 
 If you decide to deploy other tools like Istio or MetalLB, you will encounter more Kubernetes API resources in the form of Custom Resources Definitions (CRD).
+
+
+
+#thanhtikesoe
